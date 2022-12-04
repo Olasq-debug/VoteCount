@@ -1,0 +1,18 @@
+{% extends 'Poll/base.html' %} 
+
+{% block content %} 
+{% for post in posts %}  
+<table>
+    <tr><th>Unique id</th>
+        <th> Party Abbreviation </th>
+        <th> Party Score </th>
+    </tr>
+    <tr>
+        <td> {{post.polling_unit_uniqueid }}</td>
+        <td>{{ post.party_abbreviation }} </td>
+        <td> {{ post.party_score}} </td>
+    </tr>
+</table>
+{% endfor %}
+
+{% endblock %}
